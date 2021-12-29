@@ -1,3 +1,3 @@
 # webpack-project
 
-test repositpry
+test repository
