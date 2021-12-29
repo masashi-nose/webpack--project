@@ -28,14 +28,20 @@ module.exports = {
         generator: {
           filename: "images/[name][ext]",
         },
+        use: [],
+      },
+      {
+        test: /\.pug/,
         use: [
-          //   {
-          //     loader: "file-loader",
-          //     options: {
-          //       esModule: false,
-          //       name: "images/[name].[ext]",
-          //     },
-          //   },
+          {
+            loader: "html-loader",
+          },
+          {
+            loader: "pug-html-loader",
+            options: {
+              pretty: true,
+            },
+          },
         ],
       },
     ],
@@ -46,7 +52,13 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: "body",
-      template: "./src/templates/index.html",
+      template: "./src/templates/index.pug",
+      filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      inject: "body",
+      template: "./src/templates/access.pug",
+      filename: "access.html",
     }),
     new CleanWebpackPlugin(),
   ],
