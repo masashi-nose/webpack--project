@@ -1,3 +1,0 @@
-# webpack-project
-
-test repository
