@@ -1,7 +1,28 @@
-/*!****************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/stylesheets/main.css ***!
-  \****************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/stylesheets/main.scss ***!
+  \********************************************************************************************************************/
+.footer {
+  background-color: #ddd;
+}
+
 body {
   color: red;
 }
 
+.content {
+  margin-right: 16px;
+}
+.content .title, .content .title-sm, .content .title-md, .content .title-lg {
+  font-size: 24px;
+  color: black;
+  background-color: aqua;
+}
+.content .title-lg {
+  font-size: 32px;
+}
+.content .title-md {
+  font-size: 16px;
+}
+.content .title-sm {
+  font-size: 8px;
+}
